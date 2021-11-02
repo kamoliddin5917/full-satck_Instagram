@@ -1,0 +1,14 @@
+.friend{
+    margin-left: 20px;
+}
+.nav-profile-link{
+    width: 90px;
+    display: inline-block;
+    text-decoration: none;
+}
+.nav-profile-image{
+    display: inline-block;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}

@@ -1,0 +1,31 @@
+.nav-profile{
+    display: flex;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.friends{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+    list-style: none;
+}
+.friends::-webkit-scrollbar {
+   display: none;
+  }
+.box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    height: 60vh;
+    overflow-y: scroll;
+
+    margin-top: 10px;
+    list-style: none;
+}
+.box::-webkit-scrollbar{
+    display: none;
+}

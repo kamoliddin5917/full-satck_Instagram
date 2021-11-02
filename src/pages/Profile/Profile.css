@@ -1,0 +1,62 @@
+.profile__body{
+    display: flex;
+    align-items: flex-start;
+    
+}
+.profile__left{
+    width: 20%;
+    text-align: center;
+}
+.profile__right{
+    width: 80%;
+}
+.profile__image{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+.profile__left input[type="text"]{
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+}
+.profile__image-input{
+    display: none;
+}
+.profile__left button{
+    width: 80%;
+    background: gold;
+    border: 1px solid red;
+    outline: none;
+    padding: 5px;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .4s;
+}
+.profile__left button:hover{
+    background: transparent;
+    color: #000;
+}
+.profile__left .profile__exit-btn{
+    background: red;
+    margin-top: 10px;
+}
+.profile__right form{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile__right button{
+    padding: 5px;
+    border: none;
+    outline: none;
+    background: gold;
+    color: green;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.profile__right .box{
+    height: 75vh;
+}

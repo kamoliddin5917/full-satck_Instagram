@@ -1,0 +1,36 @@
+.header{
+    padding: 20px 0;
+}
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+}
+.logo__img{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+.logo__img-text{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin-left: 15px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.nav__link:not(:last-child){
+    margin-right: 20px;
+}
+.home__profile-image{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

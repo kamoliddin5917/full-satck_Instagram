@@ -1,0 +1,17 @@
+.signup__h3{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: .5;
+}
+.signup__facebook{
+    background-color: #0095F6;
+    padding: 10px;
+    border-radius: 8px;
+}
+.signup__facebook-text{
+    color: #fff;
+}
+.signup__form{
+    margin-top: 10px;
+}
