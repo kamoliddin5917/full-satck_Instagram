@@ -1,5 +1,5 @@
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 
 // Images
@@ -12,6 +12,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const history = useHistory();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,17 +25,18 @@ const Login = () => {
     const json = await fetch("http://localhost:777/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(contact)
+      body: JSON.stringify(contact),
     });
-    const data = await json.json()
+    const data = await json.json();
 
     if (data.token) {
-      document.cookie = "token=" + data.token
-    }else{
-      document.cookie = "token=false"
+      document.cookie = "token=" + data.token;
+      history.push("/");
+    } else {
+      document.cookie = "token=false";
     }
 
-    setContact({email:"", password:""})
+    setContact({ email: "", password: "" });
   };
   return (
     <section className="login">
@@ -80,10 +82,18 @@ const Login = () => {
         <p className="login__app-text">Install the app</p>
         <div className="login__app-links">
           <Link className="login__app-link" to="/login">
-            <img className="login__app-image login__app-image-appstore" src={AppStore} alt="ok"/>
+            <img
+              className="login__app-image login__app-image-appstore"
+              src={AppStore}
+              alt="ok"
+            />
           </Link>
           <Link className="login__app-link" to="/login">
-            <img className="login__app-image login__app-image-googleplay" src={GooglePlay} alt="ok"/>
+            <img
+              className="login__app-image login__app-image-googleplay"
+              src={GooglePlay}
+              alt="ok"
+            />
           </Link>
         </div>
       </div>

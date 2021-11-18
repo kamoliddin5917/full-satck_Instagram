@@ -1,5 +1,5 @@
 import "./Signup.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 
 // Images
@@ -14,6 +14,7 @@ const Signup = () => {
     email: "",
     password: "",
   });
+  const history = useHistory();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,17 +27,18 @@ const Signup = () => {
     const json = await fetch("http://localhost:777/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(contact)
+      body: JSON.stringify(contact),
     });
-    const data = await json.json()
+    const data = await json.json();
     if (data.token) {
-      document.cookie = "token=" + data.token
-    }else{
-      document.cookie = "token=false"
+      document.cookie = "token=" + data.token;
+      history.push("/");
+    } else {
+      document.cookie = "token=false";
     }
     console.log(data);
 
-    setContact({firstName:"",lastName:"", email:"", password:""})
+    setContact({ firstName: "", lastName: "", email: "", password: "" });
   };
 
   return (
